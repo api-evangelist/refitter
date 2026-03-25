@@ -1,0 +1,44 @@
+aid: refitter
+name: Refitter
+description: >-
+  Refitter is a .NET source generator that produces Refit HTTP client interfaces from OpenAPI specifications at compile time, enabling type-safe API consumption in .NET projects.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - SDKs
+  - Code Generation
+  - .NET
+  - OpenAPI
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/apis.yml
+created: '2026-03-25'
+modified: '2026-03-25'
+specificationVersion: '0.19'
+apis:
+  - aid: refitter:refitter
+    name: Refitter
+    description: >-
+      Refitter is a .NET source generator that produces Refit HTTP client interfaces from OpenAPI specifications at compile time, enabling type-safe API consumption in .NET projects.
+    humanURL: https://github.com/christianhelle/refitter
+    tags:
+      - SDKs
+  - Code Generation
+  - .NET
+  - OpenAPI
+    properties:
+      - type: Documentation
+        url: https://refitter.github.io
+      - type: Getting Started
+        url: https://refitter.github.io/articles/getting-started.html
+      - type: GitHub Repository
+        url: https://github.com/christianhelle/refitter
+common:
+  - type: Website
+    url: https://github.com/christianhelle/refitter
+  - type: Documentation
+    url: https://refitter.github.io
+  - type: GitHub Organization
+    url: https://github.com/christianhelle/refitter
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
