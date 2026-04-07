@@ -22,9 +22,9 @@ apis:
     humanURL: https://github.com/christianhelle/refitter
     tags:
       - SDKs
-  - Code Generation
-  - .NET
-  - OpenAPI
+      - Code Generation
+      - .NET
+      - OpenAPI
     properties:
       - type: Documentation
         url: https://refitter.github.io
