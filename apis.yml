@@ -5,10 +5,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - SDKs
-  - Code Generation
   - .NET
+  - Code Generation
   - OpenAPI
+  - SDKs
 url: >-
   https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/apis.yml
 created: '2026-03-25'
@@ -21,10 +21,10 @@ apis:
       Refitter is a .NET source generator that produces Refit HTTP client interfaces from OpenAPI specifications at compile time, enabling type-safe API consumption in .NET projects.
     humanURL: https://github.com/christianhelle/refitter
     tags:
-      - SDKs
-      - Code Generation
       - .NET
+      - Code Generation
       - OpenAPI
+      - SDKs
     properties:
       - type: Documentation
         url: https://refitter.github.io
