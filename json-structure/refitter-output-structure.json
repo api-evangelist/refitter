@@ -1,0 +1,43 @@
+{
+  "name": "Refitter Output Structure",
+  "description": "Structural documentation for what Refitter generates from an OpenAPI specification.",
+  "version": "1.0",
+  "outputs": {
+    "refitInterface": {
+      "description": "C# interface decorated with Refit attributes, one method per OpenAPI operation.",
+      "example": "public interface IApiClient { [Get(\"/users\")] Task<IEnumerable<User>> GetUsersAsync(); }",
+      "naming": {
+        "default": "I{ApiTitle}Api",
+        "configured": "Controlled by .refitter interfaceName setting"
+      },
+      "methodPattern": "{HttpMethod}Attribute + async Task<{ReturnType}> {OperationId}Async(parameters)"
+    },
+    "contractModels": {
+      "description": "C# model classes or records representing OpenAPI schema components.",
+      "generatedFrom": "components/schemas in OpenAPI spec",
+      "typeStyles": ["Classes", "Records", "RecordsStruct"],
+      "serialization": "System.Text.Json attributes via NJsonSchema"
+    },
+    "registrationFile": {
+      "description": "Optional DI registration extension methods for Microsoft.Extensions.DependencyInjection.",
+      "generatedWhen": "generateDependencyInjectionExtensions = true in .refitter"
+    }
+  },
+  "inputs": {
+    "openApiFormats": ["OpenAPI 2.0 (Swagger)", "OpenAPI 3.0", "OpenAPI 3.1"],
+    "inputFormats": ["JSON", "YAML"],
+    "sourceTypes": ["Local file path", "HTTP/HTTPS URL"]
+  },
+  "usageModes": {
+    "cliTool": {
+      "package": "dotnet-refitter",
+      "command": "refitter [path-or-url] --namespace [ns] --output [file]",
+      "installCommand": "dotnet tool install -g dotnet-refitter"
+    },
+    "sourceGenerator": {
+      "package": "Refitter.SourceGenerator",
+      "trigger": ".refitter configuration file in project",
+      "msbuildIntegration": true
+    }
+  }
+}

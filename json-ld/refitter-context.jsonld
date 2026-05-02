@@ -1,0 +1,49 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "refitter": "https://refitter.github.io/vocabulary#",
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "version": "schema:softwareVersion",
+    "SoftwareApplication": "schema:SoftwareApplication",
+    "SoftwareSourceCode": "schema:SoftwareSourceCode",
+    "codeRepository": "schema:codeRepository",
+    "programmingLanguage": "schema:programmingLanguage",
+    "license": "schema:license",
+    "CodeGenerator": {
+      "@id": "refitter:CodeGenerator",
+      "description": "A tool that generates source code from a specification."
+    },
+    "SourceGenerator": {
+      "@id": "refitter:SourceGenerator",
+      "description": "A .NET Roslyn source generator that produces code at compile time."
+    },
+    "RefitInterface": {
+      "@id": "refitter:RefitInterface",
+      "description": "A C# interface decorated with Refit attributes, generated from an OpenAPI spec."
+    },
+    "openApiSpec": {
+      "@id": "refitter:openApiSpec",
+      "@type": "@id",
+      "description": "The OpenAPI specification input to the code generator."
+    },
+    "generatedNamespace": {
+      "@id": "refitter:generatedNamespace",
+      "@type": "xsd:string",
+      "description": "The C# namespace for generated code."
+    },
+    "outputFile": {
+      "@id": "refitter:outputFile",
+      "@type": "xsd:string",
+      "description": "The file path for generated output."
+    },
+    "typeStyle": {
+      "@id": "refitter:typeStyle",
+      "@type": "xsd:string",
+      "description": "The C# code style for generated types (Classes, Records, or RecordsStruct)."
+    }
+  }
+}
