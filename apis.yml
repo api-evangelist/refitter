@@ -51,7 +51,7 @@ apis:
         url: https://www.nuget.org/packages/Refitter
       - type: NuGetPackage
         url: https://www.nuget.org/packages/dotnet-refitter
-      - type: Changelog
+      - type: ChangeLog
         url: https://github.com/christianhelle/refitter/releases
       - type: License
         url: https://github.com/christianhelle/refitter/blob/main/LICENSE
