@@ -8,7 +8,7 @@ description: >-
   OpenAPI 3.x specifications and generates strongly-typed C# interface
   definitions and model classes compatible with the Refit library.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/apis.yml
 created: '2026-03-25'
 modified: '2026-05-02'
