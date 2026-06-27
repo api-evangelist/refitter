@@ -57,7 +57,7 @@ apis:
         url: https://github.com/christianhelle/refitter/blob/main/LICENSE
       - type: Issues
         url: https://github.com/christianhelle/refitter/issues
-      - type: Discussions
+      - type: Forums
         url: https://github.com/christianhelle/refitter/discussions
   - aid: refitter:refit
     name: Refit
