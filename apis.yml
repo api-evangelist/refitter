@@ -23,7 +23,7 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/refitter.png
 url: https://raw.githubusercontent.com/api-evangelist/refitter/refs/heads/main/apis.yml
 created: '2026-03-25'
-modified: '2026-05-02'
+modified: '2026-08-06'
 specificationVersion: '0.19'
 tags:
   - .NET
@@ -56,13 +56,21 @@ apis:
       - type: Documentation
         url: https://refitter.github.io
       - type: GettingStarted
-        url: https://refitter.github.io/articles/getting-started.html
+        url: https://refitter.github.io/articles/cli-tool.html
+      - type: APIReference
+        url: https://refitter.github.io/api/index.html
       - type: GitHubRepository
         url: https://github.com/christianhelle/refitter
       - type: NuGetPackage
         url: https://www.nuget.org/packages/Refitter
       - type: NuGetPackage
-        url: https://www.nuget.org/packages/dotnet-refitter
+        url: https://www.nuget.org/packages/Refitter.SourceGenerator
+      - type: NuGetPackage
+        url: https://www.nuget.org/packages/Refitter.MSBuild
+      - type: NuGetPackage
+        url: https://www.nuget.org/packages/Refitter.Core
+      - type: DockerImage
+        url: https://hub.docker.com/r/christianhelle/refitter
       - type: ChangeLog
         url: https://github.com/christianhelle/refitter/releases
       - type: License
@@ -104,6 +112,38 @@ common:
     url: https://www.nuget.org/packages/Refitter
   - type: License
     url: https://github.com/christianhelle/refitter/blob/main/LICENSE
+  - type: APIReference
+    url: https://refitter.github.io/api/index.html
+  - type: GettingStarted
+    url: https://refitter.github.io/articles/cli-tool.html
+  - type: Support
+    url: https://github.com/christianhelle/refitter/discussions
+  - type: Packages
+    url: packages/refitter-packages.yml
+  - type: SDKs
+    url: packages/refitter-packages.yml
+  - type: CLI
+    url: cli/refitter-cli.yml
+  - type: ChangeLog
+    url: changelog/refitter-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/refitter-lifecycle.yml
+  - type: Deprecation
+    url: https://refitter.github.io/articles/breaking-changes-v2-0-0.html
+  - type: VulnerabilityDisclosure
+    url: security/refitter-vulnerability-disclosure.yml
+  - type: Security
+    url: https://github.com/christianhelle/refitter/security/policy
+  - type: Conformance
+    url: conformance/refitter-conformance.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: LLMsTxt
+    url: llms/refitter-llms.txt
+  - type: JSONSchema
+    url: json-schema/refitter-refitter-file-schema.json
+  - type: JSONSchema
+    url: json-schema/refitter-format-mappings-schema.json
   - type: JSONSchema
     url: json-schema/refitter-settings-schema.json
   - type: JSONStructure
@@ -115,3 +155,9 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-08-06'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1
+
