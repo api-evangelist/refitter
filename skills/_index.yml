@@ -1,0 +1,43 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/christianhelle/refitter/blob/main/AGENTS.md
+notes: >-
+  Refitter publishes its own agent instructions: an AGENTS.md at the repository
+  root plus three topic files under docs/agents/. Those four are saved VERBATIM
+  below (method: searched). One additional consumer-facing skill is generated
+  from the verified CLI surface — every flag it names was read from the
+  published CLI reference, none invented.
+skills:
+  - file: refitter-agents.md
+    name: Refitter contributor agent instructions (AGENTS.md)
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/AGENTS.md
+    audience: contributor
+    covers:
+      - Build and test (dotnet build/test against src/Refitter.slnx, TUnit treenode filters)
+      - Package boundaries across Refitter.Core / Refitter / Refitter.MSBuild / Refitter.SourceGenerator
+      - Testing conventions (TUnit, scenario tests, BuildHelper compilation checks)
+      - CI and smoke tests
+      - Code style and commit discipline
+  - file: refitter-domain-docs.md
+    name: Domain docs — how to consume CONTEXT.md and ADRs before exploring
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/docs/agents/domain.md
+    audience: contributor
+  - file: refitter-issue-tracker.md
+    name: Issue tracker conventions (GitHub Issues via gh CLI)
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/docs/agents/issue-tracker.md
+    audience: contributor
+  - file: refitter-triage-labels.md
+    name: Triage label vocabulary
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/docs/agents/triage-labels.md
+    audience: contributor
+  - file: refitter-generate-refit-client.md
+    name: Generate a Refit client from an OpenAPI specification
+    method: generated
+    source: https://refitter.github.io/articles/cli-tool.html
+    audience: consumer
+    api: cli/refitter-cli.yml
+    commands: [refitter]

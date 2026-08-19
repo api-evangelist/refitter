@@ -1,0 +1,98 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/christianhelle/refitter
+notes: >-
+  Refitter is a specification CONSUMER, not an API provider — it conforms to the
+  standards it reads and to the .NET code-generation contracts it emits. Every
+  entry below is evidenced against the repository's own docs, smoke-test corpus
+  or package metadata; nothing is asserted from reputation.
+standards:
+  - id: openapi-2.0
+    name: OpenAPI 2.0 (Swagger)
+    conforms: true
+    role: consumer
+    evidence: >-
+      test/smoke-tests.ps1 generates clients from every spec under
+      ./OpenAPI/v2.0 in both JSON and YAML and compiles the output.
+  - id: openapi-3.0
+    name: OpenAPI 3.0
+    conforms: true
+    role: consumer
+    evidence: >-
+      test/smoke-tests.ps1 generates from ./OpenAPI/v3.0 (including the live
+      petstore3.swagger.io JSON and YAML endpoints) and compiles the output.
+  - id: openapi-3.1
+    name: OpenAPI 3.1
+    conforms: true
+    role: consumer
+    evidence: >-
+      test/smoke-tests.ps1 has a dedicated ./OpenAPI/v3.1 pass; the script notes
+      v3.1 webhook specs may carry no regular API paths and skips the
+      MultipleInterfaces variants for those.
+  - id: openapi-3.4
+    name: OpenAPI 3.4
+    conforms: true
+    role: consumer
+    evidence: >-
+      test/smoke-tests.ps1 carries a "Collect generation tasks for v3.4 webhook
+      specs" pass over ./OpenAPI/v3.4.
+  - id: json-schema
+    name: JSON Schema
+    conforms: true
+    role: consumer-and-publisher
+    evidence: >-
+      Schemas inside consumed OpenAPI documents are turned into C# contracts;
+      the project also publishes a JSON Schema for its own .refitter settings
+      file at docs/json-schema.json and one for format mappings at
+      docs/format-mappings-schema.json.
+  - id: semver
+    name: Semantic Versioning
+    conforms: true
+    evidence: >-
+      Releases are tagged x.y.z; breaking changes were held for the 2.0.0 major
+      and shipped with a dedicated migration article.
+  - id: spdx-mit
+    name: MIT License
+    conforms: true
+    evidence: https://github.com/christianhelle/refitter/blob/main/LICENSE
+  - id: netstandard2.0
+    name: .NET Standard 2.0
+    conforms: true
+    evidence: >-
+      Refitter.Core, Refitter.MSBuild and Refitter.SourceGenerator all target
+      netstandard2.0; the CLI targets net8.0/net9.0/net10.0.
+  - id: agents-md
+    name: AGENTS.md
+    conforms: true
+    evidence: >-
+      A published AGENTS.md at the repository root, plus per-topic agent docs
+      under docs/agents/ (domain, issue-tracker, triage-labels).
+  - id: oauth2
+    conforms: false
+    evidence: No hosted API surface; Refitter issues no credentials of its own.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No HTTP API surface. Errors are CLI/compiler diagnostics.
+  - id: rfc9116-security-txt
+    conforms: false
+    evidence: /.well-known/security.txt returns 404 on refitter.github.io (GitHub Pages).
+generates:
+  - target: Refit
+    name: Refit HTTP client interfaces and contracts
+    url: https://github.com/reactiveui/refit
+  - target: Apizr
+    name: Optional Apizr-flavoured output (IApizrRequestOptions parameter, Apizr cancellation)
+    url: https://www.apizr.net
+  - target: System.Text.Json
+    name: 'System.Text.Json serialization, incl. polymorphic serialization and 9.0+ JsonStringEnumMemberName'
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://raw.githubusercontent.com/christianhelle/refitter/main/test/smoke-tests.ps1
+      status: 200
+    - url: https://raw.githubusercontent.com/christianhelle/refitter/main/docs/json-schema.json
+      status: 200
+    - url: https://raw.githubusercontent.com/christianhelle/refitter/main/docs/format-mappings-schema.json
+      status: 200
+    - url: https://refitter.github.io/.well-known/security.txt
+      status: 404

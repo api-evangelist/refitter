@@ -1,0 +1,58 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/christianhelle/refitter/releases
+notes: >-
+  Refitter is a developer tool, not a hosted API — it ships as NuGet packages, a
+  container image and a GitHub Action, so its lifecycle surface is release
+  cadence, versioning and breaking-change policy rather than an SLA or uptime
+  status page. Recorded absences below are real observations, not gaps we failed
+  to look for.
+versioning:
+  scheme: semver
+  current: 2.1.3
+  current_date: '2026-08-02'
+  channels:
+    - {name: stable, source: 'https://www.nuget.org/packages/Refitter'}
+    - {name: preview, source: 'https://hub.docker.com/r/christianhelle/refitter (x.y.z-preview.NNN tags)'}
+  release_feed: https://github.com/christianhelle/refitter/releases
+  release_cadence_observed: >-
+    Six releases between 2026-05-01 (2.0.0) and 2026-08-02 (2.1.3); prior 1.x
+    line released roughly monthly from 2025.
+deprecation:
+  policy_url: https://refitter.github.io/articles/breaking-changes-v2-0-0.html
+  policy_style: >-
+    Breaking changes are gathered into a major version and shipped with a
+    dedicated migration article naming each break, its impact, and step-by-step
+    migration. v2.0.0 documented two breaking changes with before/after
+    configuration examples and links to the commits and PRs that made them.
+  sunset_header: null
+  note: >-
+    No RFC 8594 Sunset/Deprecation header applies — there is no HTTP surface.
+    Deprecation of generated output is handled the other way round: the CLI
+    exposes --no-deprecated-operations to skip operations a consumed OpenAPI
+    marks deprecated.
+support:
+  target_frameworks_current: [net8.0, net9.0, net10.0]
+  core_target_framework: netstandard2.0
+  sdk: '10.0.100 (rollForward latestFeature)'
+  minimum_runtime: .NET 8.0
+sla: null
+status_page: null
+status_page_note: >-
+  No status page — the project ships packages rather than a hosted service. Build
+  health is published as GitHub Actions workflow status on the repository.
+issue_tracking:
+  issues: https://github.com/christianhelle/refitter/issues
+  discussions: https://github.com/christianhelle/refitter/discussions
+  triage_labels: [needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix]
+  triage_docs: https://github.com/christianhelle/refitter/blob/main/docs/agents/triage-labels.md
+changelog: changelog/refitter-changelog.yml
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://github.com/christianhelle/refitter/releases
+      status: 200
+    - url: https://refitter.github.io/articles/breaking-changes-v2-0-0.html
+      status: 200
+    - url: https://github.com/christianhelle/refitter/discussions
+      status: 200

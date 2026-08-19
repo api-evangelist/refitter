@@ -1,0 +1,90 @@
+generated: '2026-08-06'
+method: searched
+source: https://www.nuget.org/profiles/christianhelle
+notes: >-
+  Refitter ships as .NET packages on NuGet.org, a container image on Docker Hub,
+  and a GitHub Action. All are published by the project author
+  (christianhelle) from the christianhelle/refitter repository, so every entry
+  below is first-party. Downloads and versions observed 2026-08-06 via the
+  NuGet search API (azuresearch-usnc.nuget.org) and the Docker Hub v2 API.
+packages:
+  - language: csharp
+    registry: nuget
+    name: Refitter
+    url: https://www.nuget.org/packages/Refitter
+    install: dotnet tool install --global Refitter
+    version: 2.1.3
+    downloads: 12534007
+    role: CLI tool (.NET global tool, PackAsTool)
+    target_frameworks: [net8.0, net9.0, net10.0]
+    official: true
+  - language: csharp
+    registry: nuget
+    name: Refitter.SourceGenerator
+    url: https://www.nuget.org/packages/Refitter.SourceGenerator
+    install: dotnet add package Refitter.SourceGenerator
+    version: 2.1.3
+    downloads: 1286648
+    role: Roslyn C# source generator; emits code in-memory via AddSource() since v2.0.0
+    target_frameworks: [netstandard2.0]
+    official: true
+  - language: csharp
+    registry: nuget
+    name: Refitter.MSBuild
+    url: https://www.nuget.org/packages/Refitter.MSBuild
+    install: dotnet add package Refitter.MSBuild
+    version: 2.1.3
+    downloads: 372481
+    role: MSBuild task (RefitterGenerateTask runs before BeforeCompile)
+    target_frameworks: [netstandard2.0]
+    official: true
+  - language: csharp
+    registry: nuget
+    name: Refitter.Core
+    url: https://www.nuget.org/packages/Refitter.Core
+    install: dotnet add package Refitter.Core
+    version: 2.1.3
+    downloads: 263081
+    role: Core generation library (NSwag-based); referenced by all three distribution forms
+    target_frameworks: [netstandard2.0]
+    official: true
+containers:
+  - registry: docker-hub
+    name: christianhelle/refitter
+    url: https://hub.docker.com/r/christianhelle/refitter
+    pull: docker pull christianhelle/refitter
+    tags_observed: [latest, 2.1.3, 2.1.2]
+    tag_count: 25
+    docs: https://refitter.github.io/articles/docker.html
+    official: true
+actions:
+  - platform: github-actions
+    name: refitter-action
+    url: https://github.com/christianhelle/refitter-action
+    description: Generate a Refit API client using Refitter inside a GitHub Actions workflow
+    official: true
+    note: >-
+      Repository is public and reachable (HTTP 200); no GitHub Marketplace
+      listing was found at /marketplace/actions/refitter-action (HTTP 404).
+not_found:
+  - name: dotnet-refitter
+    url: https://www.nuget.org/packages/dotnet-refitter
+    status: 404
+    note: >-
+      apis.yml previously carried a NuGetPackage pointer to dotnet-refitter.
+      The package does not exist on NuGet.org (registration index 404). The
+      .NET global tool is published as `Refitter` and installed with
+      `dotnet tool install --global Refitter`. Pointer corrected in apis.yml.
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://azuresearch-usnc.nuget.org/query?q=refitter&prerelease=false
+      status: 200
+    - url: https://api.nuget.org/v3/registration5-semver1/refitter/index.json
+      status: 200
+    - url: https://api.nuget.org/v3/registration5-semver1/dotnet-refitter/index.json
+      status: 404
+    - url: https://hub.docker.com/v2/repositories/christianhelle/refitter/
+      status: 200
+    - url: https://github.com/christianhelle/refitter-action
+      status: 200

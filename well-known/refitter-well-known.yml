@@ -1,0 +1,33 @@
+generated: '2026-08-06'
+method: probed
+host: https://refitter.github.io
+notes: >-
+  Refitter has no first-party domain — the documentation site is GitHub Pages at
+  refitter.github.io, which serves a 404 for every path outside the DocFX build.
+  Nothing under /.well-known/ is published, and there is no API host to probe.
+  Recorded so a later round does not re-litigate the absence; no WellKnown
+  pointer is wired into apis.yml because nothing was found.
+documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /llms.txt, status: 404}
+contract_discovery:
+  probes:
+    - {path: /openapi.json, status: 404}
+    - {path: /openapi.yaml, status: 404}
+    - {path: /swagger.json, status: 404}
+    - {path: /api-docs, status: 404}
+    - {path: /asyncapi.yaml, status: 404}
+  result: >-
+    No machine-readable HTTP API contract exists, and none should — Refitter is a
+    build-time code generator with no runtime service. Its machine-readable
+    contracts are the two JSON Schemas it publishes for its own settings files
+    (see json-schema/).
+x-evidence:
+  fetched: '2026-08-06'
+  probe_method: curl -sIL against https://refitter.github.io

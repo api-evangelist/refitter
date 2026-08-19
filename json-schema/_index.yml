@@ -1,0 +1,39 @@
+generated: '2026-08-06'
+method: searched
+notes: >-
+  Two of the three schemas below are the project's OWN published schemas, saved
+  verbatim from the repository. The third is an API Evangelist-authored summary
+  schema kept from an earlier round; the upstream file supersedes it as the
+  authoritative contract for the .refitter settings format.
+schemas:
+  - file: refitter-refitter-file-schema.json
+    name: .refitter settings file (upstream, authoritative)
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/docs/json-schema.json
+    fetched_from: https://raw.githubusercontent.com/christianhelle/refitter/main/docs/json-schema.json
+    http_status: 200
+    bytes: 22798
+    docs: https://refitter.github.io/articles/refitter-file-format.html
+    describes: >-
+      The complete .refitter settings contract shared by the CLI, the MSBuild
+      task and the source generator, including the Apizr, dependency-injection
+      and code-generator settings groups.
+  - file: refitter-format-mappings-schema.json
+    name: Custom format mappings (upstream)
+    method: searched
+    source: https://github.com/christianhelle/refitter/blob/main/docs/format-mappings-schema.json
+    fetched_from: https://raw.githubusercontent.com/christianhelle/refitter/main/docs/format-mappings-schema.json
+    http_status: 200
+    bytes: 704
+    example: https://github.com/christianhelle/refitter/blob/main/docs/format-mappings-example.json
+    describes: >-
+      Key/value mapping of OpenAPI `format` values to .NET types, introduced in
+      v2.0.0 (issue #438, PR #927).
+  - file: refitter-settings-schema.json
+    name: Refitter Settings (API Evangelist summary schema)
+    method: generated
+    source: apis.yml + Refitter docs
+    superseded_by: refitter-refitter-file-schema.json
+    note: >-
+      Retained for continuity. Prefer the upstream schema above — it is the
+      contract the tool actually validates against.

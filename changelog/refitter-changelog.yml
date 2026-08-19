@@ -1,0 +1,78 @@
+generated: '2026-08-06'
+method: searched
+source: https://github.com/christianhelle/refitter/blob/main/CHANGELOG.md
+sources:
+  - https://raw.githubusercontent.com/christianhelle/refitter/main/CHANGELOG.md
+  - https://github.com/christianhelle/refitter/releases
+  - https://refitter.github.io/articles/breaking-changes-v2-0-0.html
+scheme: semver
+current_version: 2.1.3
+current_version_date: '2026-08-02'
+format: >-
+  CHANGELOG.md is generated per release (github-changelog-generator style) and
+  groups each tag into "Implemented enhancements", "Fixed bugs", "Closed issues"
+  and "Merged pull requests", every line linked to its issue or PR. GitHub
+  Releases carry the same tags. An "Unreleased" section tracks merged work
+  ahead of the next tag.
+unreleased: true
+window: recent releases observed 2026-08-06
+entries:
+  - version: 2.1.3
+    date: '2026-08-02'
+    breaking: false
+    highlights:
+      - Tag MSBuild-driven generations in telemetry (#1214)
+      - Resolve SonarCloud maintainability issues across severities (#1212)
+      - Pass CancellationToken to async calls to resolve SonarCloud S8949 (#1209)
+  - version: 2.1.2
+    date: '2026-07-28'
+    breaking: false
+    security: true
+    highlights:
+      - Fix RCE attribute injection in generated Refit clients (GHSA-3fhm-p725-h3g3, GHSA-58x9-vjvp-6mx8, GHSA-p32v-8v8j-j534) (#1178)
+      - Revert MSBuild refactoring and restore CLI bundling implementation (#1207)
+      - Update Refit packages to v14.0.1 (#1206)
+      - Publish NuGet packages to GitHub Packages (#1208)
+  - version: 2.1.1
+    date: '2026-07-27'
+    breaking: false
+    security: true
+    highlights:
+      - 'Fix GHSA-x6w4-f264-3vvr: restrict unrestricted $ref resolution (#1173)'
+      - Fix generated response type for 202 Accepted responses (#1202)
+      - Disambiguate dynamic QueryParams type names in ByTag mode (#1198)
+      - Sort parameters correctly even when the OpenAPI document is unsorted (#1192)
+  - version: 2.1.0
+    date: '2026-07-05'
+    breaking: false
+    highlights:
+      - Windows Authentication support in the generated ConfigureRefitClients() (#1170, #1171)
+      - Allow setting JsonLibraryVersion (#1105)
+      - RefitterAutoScan opt-out property for Refitter.MSBuild (#1094)
+      - Decouple the CLI binary dependency from the MSBuild task (#1154)
+      - Large internal architecture pass across RefitGenerator, InterfaceGenerator and ParameterExtractor
+  - version: 2.0.0
+    date: '2026-05-01'
+    breaking: true
+    breaking_changes_doc: https://refitter.github.io/articles/breaking-changes-v2-0-0.html
+    breaking_changes:
+      - 'Renamed .refitter setting generateAuthenticationHeader (boolean) to authenticationHeaderStyle (enum: None | Method | Parameter). Old keys are silently ignored.'
+      - Refitter.SourceGenerator emits code in-memory via Roslyn context.AddSource() instead of writing .g.cs files to disk; Refit no longer flows transitively from the source generator package.
+    highlights:
+      - Custom format-mappings via key-value configuration (#438, #927)
+      - Generate a client from multiple spec versions (#350)
+      - Source generator support in the standalone tool (#179)
+      - PropertyNamingPolicy support for JSON property naming (#969)
+      - Microsoft.OpenApi v3.4 (#945)
+  - version: 1.7.3
+    date: '2026-01-24'
+    breaking: false
+    highlights:
+      - Final 1.7.x maintenance release before the 2.0.0 breaking change train
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+    - url: https://raw.githubusercontent.com/christianhelle/refitter/main/CHANGELOG.md
+      status: 200
+    - url: https://github.com/christianhelle/refitter/releases
+      status: 200
