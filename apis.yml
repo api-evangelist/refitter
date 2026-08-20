@@ -32,6 +32,14 @@ tags:
   - OpenAPI
   - Refit
   - Source Generator
+  - Type Safe
+tags_raw:
+  - .NET
+  - C#
+  - Code Generation
+  - OpenAPI
+  - Refit
+  - Source Generator
   - Type-Safe
 apis:
   - aid: refitter:refitter
@@ -88,6 +96,11 @@ apis:
       at runtime via Castle DynamicProxy or source generators.
     humanURL: https://reactiveui.github.io/refit/
     tags:
+      - .NET
+      - HTTP Client
+      - REST Client
+      - Type Safe
+    tags_raw:
       - .NET
       - HttpClient
       - REST Client
