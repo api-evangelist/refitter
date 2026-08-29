@@ -8,6 +8,17 @@ description: >-
   OpenAPI 3.x specifications and generates strongly-typed C# interface
   definitions and model classes compatible with the Refit library.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: unknown
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - repository-unlicensed
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
@@ -113,6 +124,8 @@ apis:
       - type: NuGetPackage
         url: https://www.nuget.org/packages/Refit
 common:
+  - type: ContributionGuide
+    url: https://github.com/christianhelle/refitter/blob/main/CONTRIBUTING.md
   - type: Website
     url: https://refitter.github.io
   - type: GitHubRepository
