@@ -9,15 +9,20 @@ description: >-
   definitions and model classes compatible with the Refit library.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: self-hosted
+  license: MIT
+  license_evidence:
+    repo: christianhelle/refitter
+    spdx: MIT
+    stars: 417
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -63,7 +68,6 @@ apis:
       model classes, and optional Refit settings for use with the Refit
       HttpClient library.
     humanURL: https://github.com/christianhelle/refitter
-    baseURL: https://refitter.github.io
     tags:
       - .NET
       - C#
