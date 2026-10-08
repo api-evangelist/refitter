@@ -128,6 +128,12 @@ apis:
       - type: NuGetPackage
         url: https://www.nuget.org/packages/Refit
 common:
+  - type: Plans
+    url: plans/refitter-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/refitter-rate-limits.yml
+  - type: FinOps
+    url: finops/refitter-finops.yml
   - type: ContributionGuide
     url: https://github.com/christianhelle/refitter/blob/main/CONTRIBUTING.md
   - type: Website
