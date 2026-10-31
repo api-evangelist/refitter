@@ -64,74 +64,139 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Refitter is a .NET tool and Roslyn source generator that produces strongly-typed Refit HTTP client interfaces from OpenAPI specifications. It enables type-safe API consumption in .NET projects by generating C# interface definitions and model classes automatically from OpenAPI 2.0 and 3.x specs.
+Refitter is a .NET tool and source generator that produces Refit HTTP client interfaces from OpenAPI specifications. It runs at compile time as a source generator or as a standalone CLI tool (dotnet-refitter), enabling type-safe API consumption in .NET projects. Refitter reads OpenAPI 2.0 (Swagger) and OpenAPI 3.x specifications and generates strongly-typed C# interface definitions and model classes compatible with the Refit library.
 
-**Human URL:** [https://refitter.github.io](https://refitter.github.io)
+**Areas:** .NET · C# · Code Generation · OpenAPI · Refit · Source Generator · Type Safe
 
-**GitHub Repository:** [https://github.com/christianhelle/refitter](https://github.com/christianhelle/refitter)
+## Refitter on APIs.io
 
-## Tags
+Everything profiled for Refitter is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/refitter/](https://apis.io/providers/refitter/)** — or go straight to one of the APIs or properties below.
 
-- .NET
-- C#
-- Code Generation
-- OpenAPI
-- Refit
-- Source Generator
-- Type-Safe
+### APIs (2)
 
-## APIs
+- [Refitter](https://apis.io/apis/refitter/refitter/) — Refitter is a .NET source generator and CLI tool that produces Refit HTTP client interfaces from OpenAPI 2.0 and 3.x specifications. Supports compile-time…
+- [Refit](https://apis.io/apis/refitter/refit/) — The type-safe REST library for .NET that Refitter generates interfaces for. Refit turns REST APIs into live interfaces by decorating C# interfaces with…
 
-### Refitter
-.NET source generator and CLI tool (dotnet-refitter) for generating Refit interfaces from OpenAPI specs.
+### Published properties
 
-- [Documentation](https://refitter.github.io)
-- [Getting Started](https://refitter.github.io/articles/getting-started.html)
-- [GitHub Repository](https://github.com/christianhelle/refitter)
-- [NuGet Package](https://www.nuget.org/packages/Refitter)
-- [CLI Tool](https://www.nuget.org/packages/dotnet-refitter)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Refit
-The type-safe REST library for .NET that Refitter generates interfaces for.
+#### JSON Schema (3)
 
-- [Documentation](https://reactiveui.github.io/refit/)
-- [GitHub Repository](https://github.com/reactiveui/refit)
+The data models the API reads and writes.
 
-## Artifacts
+- [Refitter Format Mappings](https://apis.io/schemas/refitter/refitter-format-mappings/)
+- [Refitter Refitter File](https://apis.io/schemas/refitter/refitter-refitter-file/)
+- [Refitter Settings](https://apis.io/schemas/refitter/refitter-settings/)
 
-### JSON Schema
+#### JSON Structure (1)
 
-| Schema | Description |
-|--------|-------------|
-| [Refitter Settings Schema](json-schema/refitter-settings-schema.json) | Schema for the .refitter configuration file |
+Data models expressed in JSON Structure.
 
-### JSON Structure
+- [Refitter Output Structure](https://apis.io/json-structure/refitter/refitter-output-structure/)
 
-| Structure | Description |
-|-----------|-------------|
-| [Refitter Output Structure](json-structure/refitter-output-structure.json) | Documentation of Refitter's generated outputs and usage modes |
+#### JSON-LD (1)
 
-### JSON-LD
+Linked-data contexts for the provider's vocabulary.
 
-| Context | Description |
-|---------|-------------|
-| [Refitter Context](json-ld/refitter-context.jsonld) | JSON-LD context for code generation and source generator concepts |
+- [Refitter Context](https://apis.io/jsonld/refitter/refitter-context/)
 
-### Vocabulary
+#### Vocabulary (1)
 
-| Vocabulary | Description |
-|------------|-------------|
-| [Refitter Vocabulary](vocabulary/refitter-vocabulary.yml) | Domain vocabulary for Refitter, Refit, and .NET code generation |
+The provider's domain terms, defined.
 
-## Common Properties
+- [Refitter Vocabulary](https://apis.io/vocabularies/refitter/refitter-vocabulary/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Refitter — jsonschema rules](https://apis.io/rules/refitter/refitter-jsonschema-spectral-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Refitter Vulnerability Disclosure](https://apis.io/security/refitter/refitter-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Refitter Plans Pricing](https://apis.io/plans/refitter/refitter-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Refitter Rate Limits](https://apis.io/rate-limits/refitter/refitter-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Refitter Finops](https://apis.io/finops/refitter/refitter-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://refitter.github.io)
-- [GitHub Repository](https://github.com/christianhelle/refitter)
 - [Documentation](https://refitter.github.io)
-- [Issues](https://github.com/christianhelle/refitter/issues)
-- [NuGet Package](https://www.nuget.org/packages/Refitter)
+- [Getting started](https://refitter.github.io/articles/cli-tool.html)
+- [API reference](https://refitter.github.io/api/index.html)
+- [Support](https://github.com/christianhelle/refitter/discussions)
+- [Security](https://github.com/christianhelle/refitter/security/policy)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 34.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 10.7 |
+| Contract governance | 41.7 |
+| Operational transparency | 47.4 |
+| Developer ergonomics | 54.8 |
+| Access clarity | 7.9 |
+
+**Agent readiness 4.2** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | yes |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/refitter/](https://apis.io/providers/refitter/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Refitter: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/refitter/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
